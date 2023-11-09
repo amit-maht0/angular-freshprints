@@ -1,0 +1,26 @@
+.home_area {
+  margin-top: 5%;
+  text-align: center;
+
+  .search_box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .search_results {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+    .search_results_header {
+      text-align: left;
+    }
+    .card {
+      .profileImage {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<main class="history">
+  <table class="history_table">
+    <thead>
+      <tr>
+        <th class="table_header">Search Term</th>
+        <th class="table_header">Search Results</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of gitHubData">
+        <td class="table_data">{{ row.searchName }}</td>
+        <td class="table_data">
+          <div class="row" *ngIf="row.isUser">
+            <div class="col-sm-6">
+              <p>User Image</p>
+              <img class="profilePic" src="{{ row.profilePic }}" />
+            </div>
+            <div class="col-sm-6">
+              <p>GitHub User Name</p>
+              <p>{{ row.userName }}</p>
+            </div>
+          </div>
+          <div class="row" *ngIf="!row.isUser">
+            <p>Search result not found!</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="clear_history">
+    <button
+      class="btn btn-outline-success"
+      type="submit"
+      (click)="clearLocalStorage()"
+    >
+      Clear Search history
+    </button>
+  </div>
+</main>

@@ -1,0 +1,11 @@
+{
+  "spec_files": [
+    "src/app/home/home.component.spec.ts",
+    "src/app/users/users.component.spec.ts"
+  ],
+  "helpers": ["helpers/**/*.?(m)js"],
+  "env": {
+    "stopSpecOnExpectationFailure": false,
+    "random": true
+  }
+}

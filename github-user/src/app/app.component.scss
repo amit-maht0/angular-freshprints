@@ -1,0 +1,10 @@
+.navbar-nav .nav-item {
+    cursor: pointer;
+  }
+  
+.navbar .navbar_area{
+    justify-content: end;
+}
+  .navbar-nav .nav-item.active a {
+    border-bottom: 2px solid #007bff; // You can customize the underline color
+  }

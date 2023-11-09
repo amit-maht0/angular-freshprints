@@ -1,0 +1,34 @@
+<main class="home_area">
+  <h3>Search GitHub User</h3>
+  <form class="d-flex search_box" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      name="inputField"
+      [(ngModel)]="inputValue"
+    />
+    <button class="btn btn-outline-success" type="submit" (click)="getData()">
+      Search
+    </button>
+  </form>
+
+  <div class="search_results" *ngIf="showData && isUser">
+    <p class="search_results_header">Search Results</p>
+    <div class="card">
+      <div class="card-body row">
+        <div class="col-md-6">
+          <img class="profileImage" src="{{ this.gitHubData.profilePic }}" />
+        </div>
+        <div class="col-md-6">
+          <p>GitHub User Name</p>
+          <p>{{ this.gitHubData.userName }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="" *ngIf="!isUser && showData">
+    <p>Search Result not found!</p>
+  </div>
+</main>
